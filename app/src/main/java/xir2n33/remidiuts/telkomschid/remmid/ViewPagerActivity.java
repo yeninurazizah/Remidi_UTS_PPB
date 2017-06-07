@@ -142,9 +142,9 @@ public class ViewPagerActivity extends AppCompatActivity {
             // getItem is called to instantiate the fragment for the given page.
             // Return a PlaceholderFragment (defined as a static inner class below).
             if (position == 0)
-                return new Page1Fragment();
+                return new Nav2F1();
             else if (position == 1)
-                return new Page2Fragment();
+                return new Nav2F2();
             else
                 return PlaceholderFragment.newInstance(position + 1);
         }

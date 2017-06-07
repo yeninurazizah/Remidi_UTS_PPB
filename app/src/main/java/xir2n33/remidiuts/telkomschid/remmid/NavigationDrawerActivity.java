@@ -42,8 +42,8 @@ public class NavigationDrawerActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-        changePage(R.id.nav_camera);
-        navigationView.setCheckedItem(R.id.nav_camera);
+        changePage(R.id.nav_gallery);
+        navigationView.setCheckedItem(R.id.nav_gallery);
     }
 
     @Override
@@ -96,22 +96,14 @@ public class NavigationDrawerActivity extends AppCompatActivity
     private void changePage(int id) {
 
         Fragment fragment = null;
-        if (id == R.id.nav_camera) {
-            fragment = new Page1Fragment();
+        if (id == R.id.nav_gallery) {
+            fragment = new Nav4F1();
             setTitle("Foto");
 
             // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
-            fragment = new Page2Fragment();
+        } else if (id == R.id.nav_data) {
+            fragment = new Nav4F2();
             setTitle("Data Diri");
-        } else if (id == R.id.nav_slideshow) {
-
-        } else if (id == R.id.nav_manage) {
-
-        } else if (id == R.id.nav_share) {
-
-        } else if (id == R.id.nav_send) {
-
         }
 
         getSupportFragmentManager().beginTransaction()

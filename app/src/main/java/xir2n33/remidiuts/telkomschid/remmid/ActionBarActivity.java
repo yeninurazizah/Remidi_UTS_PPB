@@ -49,9 +49,9 @@ public class ActionBarActivity extends AppCompatActivity {
 
                 Fragment fragment;
                 if (position == 0) {
-                    fragment = new Page1Fragment();
+                    fragment = new Nav3F1();
                 } else if (position == 1) {
-                    fragment = new Page2Fragment();
+                    fragment = new Nav3F2();
 
                 } else {
                     fragment = PlaceholderFragment.newInstance(position + 1);

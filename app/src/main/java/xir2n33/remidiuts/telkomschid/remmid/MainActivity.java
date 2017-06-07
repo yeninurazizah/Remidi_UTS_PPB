@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -12,31 +13,41 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        findViewById(R.id.button).setOnClickListener(new View.OnClickListener() {
+        Button btn1 = (Button) findViewById(R.id.swipe);
+        Button btn2 = (Button) findViewById(R.id.pager);
+        Button btn3 = (Button) findViewById(R.id.spinner);
+        Button btn4 = (Button) findViewById(R.id.draw);
+
+
+        btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, SwipeViewActivity.class));
+                Intent pindah = new Intent(MainActivity.this, SwipeViewActivity.class);
+                startActivity(pindah);
             }
         });
 
-        findViewById(R.id.button).setOnClickListener(new View.OnClickListener() {
+        btn2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, ViewPagerActivity.class));
+                Intent pindah = new Intent(MainActivity.this, ViewPagerActivity.class);
+                startActivity(pindah);
             }
         });
 
-        findViewById(R.id.button).setOnClickListener(new View.OnClickListener() {
+        btn3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, ActionBarActivity.class));
+                Intent pindah = new Intent(MainActivity.this, ActionBarActivity.class);
+                startActivity(pindah);
             }
         });
 
-        findViewById(R.id.button).setOnClickListener(new View.OnClickListener() {
+        btn4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, NavigationDrawerActivity.class));
+                Intent pindah = new Intent(MainActivity.this, NavigationDrawerActivity.class);
+                startActivity(pindah);
             }
         });
     }
